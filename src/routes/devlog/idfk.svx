@@ -1,0 +1,15 @@
+---
+title: "ja vette fan"
+date: "2025-05-07"
+---
+
+This is the first update on the game.
+
+In order of what has been done so far:
+
+The background, fisherman and boat was added. The fisherman got 3 different states depending on if its idle, fishing or catching.
+A button was added that switched from idle to fishing state, then after a fixed time it switched to catching state. When pressing the catch button it switched back to idle state.
+A list of fish with sizes and prices were added and when the catch button was pressed a random one was console logged.
+A red and green hitline was added with a back and forth moving arrow. The catch button was reworked to only give a fish if pressed while the arrow is in the green area of the hitline.
+an inventory was added that adds the fish instead of logging them and a few new fish were added.
+A shop was added with a new background a a few fishing rods that dont do anything yet.
