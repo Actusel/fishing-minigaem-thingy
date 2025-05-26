@@ -21,9 +21,9 @@
 			if (inventoy_toggled) {
 				sell_all();
 			}
-		} else if (event.key == "i") {
+		} else if (event.key == "e") {
 			toggleInventory();
-		} else if (event.key == "s") {
+		} else if (event.key == "b") {
 			toggleShop();
 		}
 	}
@@ -40,7 +40,7 @@
 		},
 		{
 			name: "iron rod",
-			price: 40,
+			price: 500,
 			image: "iron_rod.png",
 			size: 15,
 			time: 0.8,
@@ -49,7 +49,7 @@
 		},
 		{
 			name: "golden or blaze rod idk",
-			price: 60,
+			price: 2000,
 			image: "golden_or_blaze_rod_idk.png",
 			size: 20,
 			time: 0.4,
@@ -58,7 +58,7 @@
 		},
 		{
 			name: "blue blunderbuss",
-			price: 20,
+			price: 5000,
 			image: "Blue Blunderbuss.png",
 			size: 50,
 			time: 0.6,
@@ -233,6 +233,10 @@ function fish_catching() {
 	if (fisherman_state.name == "catching" && timing_arrow && green_timing) {
 		let random_fish_number = Math.floor(Math.random() * fish.length);
 		let random_fish = { ...fish[random_fish_number]};
+		if (random_fish.tier > rod_equipped.tier) {
+			fish_catching();
+			return;
+		}
 		let random_multiplier = ((Math.random()+1)**5)/30 + 1;
 		random_fish.size = Math.floor(random_multiplier * random_fish.size * (rod_equipped.size/10));
 		random_fish.price = Math.floor(random_fish.price * random_fish.size);
@@ -337,7 +341,6 @@ function average_catch_value_from_rod(rod) {
 	<button disabled>fishing...</button>
 	{/if}
 	{#if fisherman_state.name == "catching"}
-	{setTimeout(() => {fisherman_state=fisherman_states[0];alert("It got away cuz you were too slow :/")}, 10000)}
 	<button on:click={fish_catching}> CATCH!</button>
 	<div id="timing">
 		<div id=red></div>
@@ -349,6 +352,8 @@ function average_catch_value_from_rod(rod) {
 	{/if}
 	
 </main>
+
+<footer> controls: SPACEBAR to fish, E for Inventory, B for shop, ENTER to sell all, ESC to close inventory/shop </footer>
 
 <div>
 	<img src="https://img.freepik.com/free-vector/nature-underwater-blue-clear-water-background_1308-129993.jpg" alt="" id="background">
@@ -374,6 +379,19 @@ function average_catch_value_from_rod(rod) {
 	flex-direction: column;
 	height: 100vh;
 	z-index: 1;
+	}
+	footer{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100vw;
+		height: 50px;
+		background-color: rgba(0, 0, 0, 0.5);
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 1;
 	}
 	main img {
 		position: absolute;
@@ -537,4 +555,24 @@ function average_catch_value_from_rod(rod) {
 		animation: arrow 1.3s linear infinite;
 	}
 
+	@media (max-width: 600px) {
+	main button{
+		width: 100vw;
+		height: 60vh;
+		top: 20%;
+		font-size: 20px;
+	}
+
+		.fish_table {
+			max-width: 50vw;
+			min-width: 10vw;
+			background-color: rgba(255, 255, 255);
+		}
+		footer{
+			display: none;
+		}
+		.rod{
+			width: 250px;
+		}
+	}
 </style>
