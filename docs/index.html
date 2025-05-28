@@ -5,30 +5,41 @@
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		
-		<link href="./_app/immutable/assets/0.Dn6JPcb9.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.Bb4oZIo_.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/BXWgjNOK.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/qK2_OJlR.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/BP8ivitB.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.Brf-9ygX.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/DEoGkWbO.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.xcBo9YMU.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/2.BRbTLZVA.js">
+		<link href="./_app/immutable/assets/0.CRWs2jZN.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/2.6EAe72CE.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.DsCQ-bpj.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BmWKukb2.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/J7iBwiEQ.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/qdlesFWK.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CrZDR7_o.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.DtJnKwyH.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/C1FmrZbK.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/B5KtmYQw.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.CtVM4RHp.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.B4SdI5wC.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/D6YF6ztN.js">
 	</head>
 	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
-		<div style="display: contents">   <div class="container h-full mx-auto flex justify-center items-center" data-svelte-h="svelte-13j3giy"><div class="space-y-5"><h1 class="h1">Let&#39;s get cracking bones!</h1> <p>Start by exploring:</p> <ul><li><code class="code">/src/routes/+layout.svelte</code> - barebones layout</li> <li><code class="code">/src/app.postcss</code> - app wide css</li> <li><code class="code">/src/routes/+page.svelte</code> - this page, you can replace the contents</li></ul></div></div> 
+		<div style="display: contents">  <div id="top_row" class="svelte-1n4duoh"></div>     <aside style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh;"> <button id="button_toggle" style="left:10px;" class="svelte-dcbd48" data-svelte-h="svelte-a0p7dw">Toggle Inventory</button>  <div class="hide svelte-dcbd48"><button style="background-color:green; border-radius:10px; color:white; height: 25px; padding-left: 10px; padding-right:10px; margin-right:100%;" data-svelte-h="svelte-cwi11j">Sell⠀all</button> </div>  <p style="position: absolute; top: 10px; left: 160px; z-index: 1; color: white; font-size: 20px;">money: 100</p></aside>  <aside style="position: absolute; top: 0; right: 0; width: 100vw; height: 100vh;"> <button id="button_toggle" style="right:10px;" class="svelte-dcbd48" data-svelte-h="svelte-658qcd">Toggle Shop</button>  <div class="hide svelte-dcbd48" style="overflow: hidden;"><img src="shop_background.png" alt="shop" class="shop_table svelte-dcbd48" style="width: 100vw; height: 100vh; top: 0; left: 0; z-index: 2; object-fit: cover;"> <div class="rod svelte-dcbd48"><img src="wooden_rod.png" alt="wooden rod" class="svelte-dcbd48"> wooden rod <br>
+                Price: 0 <br> (Owned)
+                    <button class="buy_button svelte-dcbd48" style="background-color:lightseagreen" data-svelte-h="svelte-1fn0buk">Equip</button> </div><div class="rod svelte-dcbd48"><img src="iron_rod.png" alt="iron rod" class="svelte-dcbd48"> iron rod <br>
+                Price: 400 <br> <button class="buy_button svelte-dcbd48" data-svelte-h="svelte-1nq24ly">Buy</button> </div><div class="rod svelte-dcbd48"><img src="golden_or_blaze_rod_idk.png" alt="golden or blaze rod idk" class="svelte-dcbd48"> golden or blaze rod idk <br>
+                Price: 1500 <br> <button class="buy_button svelte-dcbd48" data-svelte-h="svelte-1nq24ly">Buy</button> </div><div class="rod svelte-dcbd48"><img src="Blue Blunderbuss.png" alt="blue blunderbuss" class="svelte-dcbd48"> blue blunderbuss <br>
+                Price: 4000 <br> <button class="buy_button svelte-dcbd48" data-svelte-h="svelte-1nq24ly">Buy</button> </div>  <div id="equipped" class="svelte-dcbd48"><p style="color: black; font-size: 20px;" data-svelte-h="svelte-4ye7jv">Equipped Rod:</p> <img src="wooden_rod.png" alt="wooden rod"> <p>wooden rod</p>
+            catch size: 10 <br> <p style="font-size:small;font-style:italic;text-align:center;background-color:white;border-radius:30%;" data-svelte-h="svelte-13ld21o">disclaimer: <br> larger fishes mean harder catches</p> <p>speed: 1</p> <p>average catch value: 108.65</p></div></div></aside>  <main class="svelte-dcbd48"> <img src="boat_man_epic-removebg-preview.png" alt="fisher-man" id="fisher" class="svelte-dcbd48"> <img src="wooden_rod.png" alt="fishing-rod" id="rod" class="svelte-dcbd48">  <button class="svelte-dcbd48" data-svelte-h="svelte-15iffca">start fishing</button>  </main>  <footer class="svelte-dcbd48">controls: SPACEBAR to fish, E for Inventory, B for shop, ENTER to sell all, ESC to close inventory/shop 
+    <button id="unstuck" class="svelte-dcbd48" data-svelte-h="svelte-1bvms8p">unstuck</button></footer>  <div data-svelte-h="svelte-17yktk"><img src="https://img.freepik.com/free-vector/nature-underwater-blue-clear-water-background_1308-129993.jpg" alt="" id="background" class="svelte-dcbd48"> </div> 
 			
 			<script>
 				{
-					__sveltekit_1k3tba1 = {
+					__sveltekit_tberx0 = {
 						base: new URL(".", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("./_app/immutable/entry/start.Bb4oZIo_.js"),
-						import("./_app/immutable/entry/app.Brf-9ygX.js")
+						import("./_app/immutable/entry/start.DsCQ-bpj.js"),
+						import("./_app/immutable/entry/app.DtJnKwyH.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2],
