@@ -1,5 +1,5 @@
 ---
-title: "ja vette fan"
+title: "Första bloginlägg (devblog 1+2)"
 date: "2025-05-07"
 ---
 

@@ -39,8 +39,11 @@
     let rods = [
         // Each rod has a name, price, image, catch size, catch time, tier, and bought status
         { name: "wooden rod", price: 0, image: "wooden_rod.png", size: 10, time: 1, tier: 1, bought: true },
+        // better in general
         { name: "iron rod", price: 400, image: "iron_rod.png", size: 15, time: 0.8, tier: 2, bought: false },
+        // fast rod
         { name: "golden or blaze rod idk", price: 1500, image: "golden_or_blaze_rod_idk.png", size: 20, time: 0.4, tier: 3, bought: false },
+        // slower but large fish
         { name: "blue blunderbuss", price: 4000, image: "Blue Blunderbuss.png", size: 50, time: 0.6, tier: 4, bought: false }
     ];
     let rod_equipped = rods[0]; // Currently equipped rod
@@ -264,6 +267,8 @@
         </div>
     {/if}
 </main>
+<!-- top row: Layout bar for inventory and shop toggles -->
+<div id=top_row></div>
 
 <!-- Footer: Controls Info and Unstuck Button -->
 <footer>
@@ -337,6 +342,15 @@
 		margin-right:70px;
 		z-index: 1;
 		margin-bottom: 110px;
+	}
+    #top_row {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 60px;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: 0;
 	}
 	#button_toggle {
 		position: absolute;

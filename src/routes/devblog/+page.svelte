@@ -3,9 +3,6 @@
 	export let data;
   import { base } from '$app/paths';
 </script>
-<br>
-<br>
-<br>
 <h1>Devblog</h1>
 
 <ul>

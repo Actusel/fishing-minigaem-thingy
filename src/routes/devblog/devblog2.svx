@@ -1,0 +1,18 @@
+---
+title: "andra devblog (3+4)"
+date: "2025-05-28"
+---
+
+
+Det finns nu en random längd för hur lång tid det tar att fiska, så att det inte ska vara exakt samma varje gång.
+Fiskarna kan nu säljas för size*price värt i pris. Alla fiskespön fick en size, catch speed, och bought? till sig.
+En funktion för att bestämma det bästa fiskespöet som är köpt, den visas även upp i shoppen som visar dens stats. 
+Det fiskespöets stats implimenterades till då man fiskade.
+Fiskars pris och sizes gjordes om: bättre balans i priser då man fångar. Storleken varierar, men mindre storlekar är vanligare för att göra stora storlekar mer spännande. 
+Fiskar fick en tier baserat på hur speciella de känns. Fiskespön fick också en tier, och fiskespöet kan bara fånga fiskar av samma eller lägre tier.
+Storleken på den gröna arean i "catching minigame" korisponderar med storlek på fisken, men är utbalanserat på ett sätt där det inte ska bli för svårt för snabbt.
+Eftersom större fiskespön ger större fiskar = svårare fångst gjorde jag om bästa fiskespö är det du använder till att man kan "equippa" alla fiskespön du redan köpt för att de blir aktiva.
+De temporära assetsarna av fisherman och boat byttes ut mot egenritade där fiskemannen nu håller i det faktiskt fiskespöet som du använder.
+För att inte behöva göra många bilder har fiskemannen ett neutralt och ett "exalterad för fångst" ansikte. Fiskespöet roteras beroende på om du väntar eller fångar, och rotationsaxels sattes vid fiskarens hand.
+Keybinds för att fiska, öppna menyer och sälja, för att göra navigering enklare (kontrollerna finns i footer). Footer fick en unstuck knapp för då det ibland blir en bugg där man inte får fiska upp fisken.
+Fonts, inventory, shop, och footern gjordes bättre för mobillayout.
